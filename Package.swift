@@ -9,12 +9,12 @@ let package = Package(
             targets: ["Payne"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/glimpseio/BricBrac.git", .branch("main")),
+        .package(url: "https://github.com/pixoticnet/Able.git", .branch("main")),
     ],
     targets: [
         .target(
             name: "Payne",
-            dependencies: ["BricBrac"],
+            dependencies: ["Able"],
             resources: [.process("Resources")]),
         .testTarget(
             name: "PayneTests",
