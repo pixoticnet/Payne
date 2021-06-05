@@ -6,3 +6,5 @@
 [![](https://tokei.rs/b1/github/pixoticnet/Payne)](https://github.com/pixoticnet/Payne)
 
 Accessible UI toolkit, based on SwiftUI
+
+Browse the [API Documentation](https://www.pixotic.net/docs/Payne/).
