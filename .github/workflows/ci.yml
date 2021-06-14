@@ -23,8 +23,7 @@ jobs:
         run: swift test -v --configuration release -Xswiftc -enable-testing
 
   watchOS:
-    if: false # macos-11.0 not yet public
-    runs-on: macos-11.0 # macOS 11 needed for Xcode_12.5
+    runs-on: macos-11
     needs: [Linux] # Linux must pass first
 
     env:
