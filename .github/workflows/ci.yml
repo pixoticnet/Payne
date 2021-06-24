@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -configuration Release \
               -scheme "Payne" \
               -sdk "watchsimulator" \
               -destination "platform=watchOS Simulator,name=Apple Watch Series 6 - 44mm" \
@@ -47,6 +48,7 @@ jobs:
       - run: |
             xcodebuild -showsdks
             xcodebuild clean test \
+              -configuration Release \
               -scheme "Payne" \
               -sdk "iphonesimulator" \
               -destination "platform=iOS Simulator,name=iPod touch (7th generation)" \
@@ -60,6 +62,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -configuration Release \
               -scheme "Payne" \
               -sdk "appletvsimulator" \
               -destination "platform=tvOS Simulator,name=Apple TV" \
@@ -76,8 +79,7 @@ jobs:
         run: swift test -v --configuration release -Xswiftc -enable-testing
 
   macOS11:
-    if: false # macos-11.0 not yet public
-    runs-on: macos-11.0
+    runs-on: macos-11
     needs: [macOS10] # macOS10 must pass first
     steps:
       - uses: actions/checkout@v2
