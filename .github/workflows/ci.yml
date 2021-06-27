@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "Payne" \
               -sdk "watchsimulator" \
@@ -46,8 +47,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-            xcodebuild -showsdks
             xcodebuild clean test \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "Payne" \
               -sdk "iphonesimulator" \
@@ -62,6 +63,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "Payne" \
               -sdk "appletvsimulator" \
